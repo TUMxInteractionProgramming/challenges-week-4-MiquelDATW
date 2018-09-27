@@ -27,6 +27,19 @@ button, strong {
     text-transform: uppercase;
 }
 
+.a-bit-bigger{
+    font-size: 24px;
+}
+
+.a-little-bit-of-padding{
+    padding-bottom: 5px;
+}
+
+.xxx{
+    font-size: 50px;
+    color: green;
+}
+
 /* LAYOUT #5 #split */
 
 #channels {
