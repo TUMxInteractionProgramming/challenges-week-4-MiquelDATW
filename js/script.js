@@ -1,5 +1,5 @@
 /* #6 start the #external #action and say hello */
-console.log("App is alive");
+console.log("Script is alive");
 
 /**
  * #6 #Switcher function for the #channels name in the right app bar
@@ -73,5 +73,5 @@ function toggleEmojis() {
 
 /* 3. Where am I? */
 
-var currentLocation = {longitude: 39.431817, latitude: -0.472828, what3words: "///deserved.making.wanted"};
+var currentLocation = {longitude: 39.431817, latitude: -0.472828, what3words: "deserved.making.wanted"};
 console.log(currentLocation);

@@ -19,6 +19,7 @@
     <!-- #6 #external #action-->
     <script src="js/channels.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/messages.js"></script>
 </head>
 <body>
 
@@ -33,57 +34,8 @@
 
     <!-- CHANNELS -->
     <ul>
-        <!-- #6 #channels #click calls our switchChannel with the corresponding name as an argument -->
-        <li onclick="switchChannel(yummy)">
-            #Yummy
-            <!-- #5 #channels #icons now grouped in .channel-meta span -->
-            <span class="channel-meta">
-                <i id="yummy-star" class="far fa-star a-bit-bigger"></i>
-                <!-- #5 #channels #icons now with chevron -->
-                <i class="fas fa-chevron-right a-bit-bigger"></i>
-            </span>
-        </li>
-        <!-- #6 #channels #click calls our switchChannel with the corresponding name as an argument -->
-        <li class="selected" onclick="switchChannel(sevenContinents)">
-            #SevenContinents
-            <!-- #5 #channels #icons now grouped in .channel-meta span -->
-            <span class="channel-meta">
-                <i id="sevenContinents-star" class="fas fa-star a-bit-bigger"></i>
-                <!-- #5 #channels #icons now with chevron -->
-                <i class="fas fa-chevron-right a-bit-bigger"></i>
-            </span>
-        </li>
-        <!-- #6 #channels #click calls our switchChannel with the corresponding name as an argument -->
-        <li onclick="switchChannel(killerApp)">
-            #KillerApp
-            <!-- #5 #channels #icons now grouped in .channel-meta span -->
-            <span class="channel-meta">
-                <i id="killerApp-star" class="far fa-star a-bit-bigger"></i>
-                <!-- #5 #channels #icons now with chevron -->
-                <i class="fas fa-chevron-right a-bit-bigger"></i>
-            </span>
-        </li>
-        <!-- #6 #channels #click calls our switchChannel with the corresponding name as an argument -->
-        <li onclick="switchChannel(firstPersonOnMars)">
-            #FirstPersonOnMars
-            <!-- #5 #channels #icons now grouped in .channel-meta span -->
-            <span class="channel-meta">
-                <i id="firstPersonOnMars-star" class="fas fa-star a-bit-bigger"></i>
-                <!-- #5 #channels #icons now with chevron -->
-                <i class="fas fa-chevron-right a-bit-bigger"></i>
-            </span>
-        </li>
-        <!-- #6 #channels #click calls our switchChannel with the corresponding name as an argument -->
-        <li onclick="switchChannel(octoberFest)">
-            #OctoberFest
-            <!-- #5 #channels #icons now grouped in .channel-meta span -->
-            <span class="channel-meta">
-                <i id="octoberFest-star" class="far fa-star a-bit-bigger"></i>
-                <!-- #5 #channels #icons now with chevron -->
-                <i class="fas fa-chevron-right a-bit-bigger"></i>
-            </span>
-        </li>
-
+        <!-- 3. Some more channel manipulations -->
+        <!-- The outcome of messages.js -->
     </ul>
 
     <!-- TAB BAR -->
@@ -168,12 +120,17 @@
     <div id="chat-bar"> <!-- #6 #smile #show the menu on click -->
         <button id="emojis-button" onclick="toggleEmojis()"><i class="far fa-smile a-bit-bigger"></i></button>
         <div id="emojis">&#x1F601; &#x1F602; &#x1F603; &#x1F604; &#x1F605; &#x1F606; &#x1F607;</div>
+        <form>
+            <input type="text" name="msg" placeholder="Message..." maxlength="140" id="msg-text">
+        </form>
+        <button id="msg-button" onclick="sendMessage()"><i class="fas fa-arrow-right a-bit-bigger"></i></button>
     </div>
 </div>
 
 <!-- 4. Toggle the stars -->
 <script type="text/javascript">
-    document.onload=switchChannel(sevenContinents);
+    document.onload = listChannels();
+    document.onload = switchChannel(sevenContinents);
 </script>
 </body>
 </html>

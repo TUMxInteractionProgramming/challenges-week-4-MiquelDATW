@@ -151,6 +151,15 @@ li.selected {
     border-left: 4px solid #3F51B5;
 }
 
+.small-and-blue{
+    background-color: #3F51B5;
+    color: white;
+    font-size: x-small;
+    border-radius: 2px;
+    margin: 1px;
+    padding: 3px;
+}
+
 /* TAB BAR */
 
 /* #5 #smileys #lazy: we can reuse most of the tab-bar's styles for the chat-bar */
@@ -282,4 +291,11 @@ li.selected {
 
 .message.own {
     margin-left: 17.5%;
+}
+
+#msg-text{
+    border: none;
+
+    height: 100%;
+    /*width: 600px;*/
 }
